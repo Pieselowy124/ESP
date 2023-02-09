@@ -1,0 +1,21 @@
+auto respawn (use first):
+		_G.Loop = true
+	
+		while _G.Loop == true do
+			wait()
+			if game.Players.LocalPlayer.Character.Humanoid.Health <= 15 then
+				local location = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+				local A_1 = "\66\114\111\121\111\117\98\97\100\100"
+				local Event = game:GetService("Workspace").Remote.loadchar
+				Event:InvokeServer(A_1)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = location
+			end
+		end
+
+
+
+spawn guns (only guards):
+while true do
+			game.Players.LocalPlayer.Character:BreakJoints()
+			wait(1,5)
+end
